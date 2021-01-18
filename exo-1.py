@@ -1,15 +1,26 @@
-def bubbleSort(arr):
-    arrLen = len(arr)
-    
-    for i in range(arrLen - 1):
-        for j in range(0, arrLen-i-1):
-            if  arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+def bubbleSort(arr): 
+    n = len(arr) 
 
-arr = [25, 36 , 7, 21, 85, 36]
+    for i in range(n): 
+  
+        for j in range(0, n-i-1):
+  
+            if arr[j] > arr[j+1] :
+                arr[j], arr[j+1] = arr[j+1], arr[j] 
 
-bubbleSort(arr);
+arr = [15, 147, 1, 7, 954, 32, 18, 49, 13] 
 
-print ("Sort array")
-for i in range(len(arr)):
-    print ("%d" %arr[i])
+bubbleSort(arr) 
+
+def implode(separator, arr):
+    n = ""
+    pos = 0
+    for i in range(len(arr)):
+        pos += 1
+        n += str(arr[i])
+        if pos != len(arr):
+            n += separator
+
+    return n
+
+print ("L'array trié est : " + implode(", ", arr))
