@@ -1,7 +1,6 @@
 import time
-from utils import getBlockchainZeros 
+from utils import getBlockchainZeros, calculateHash
 from hashlib import sha256
-from utils import calculateHash
 
 class Block(object):
     def __init__(self, id, previousHash, hashBody):
